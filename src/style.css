@@ -37,18 +37,15 @@ main ul li:not(:last-child) {
 
 /* Clear all */
 
-.list-footer {
+main ul li.list-footer {
   background-color: #f8f8f8;
-  padding: 1em 1.5em;
-  min-height: 60px;
-  border: transparent;
   display: flex;
   justify-content: center;
-  align-items: center;
   color: #a0a0a0;
+  cursor: pointer;
 }
 
-.list-footer:hover {
+main ul li.list-footer:hover {
   text-decoration: underline;
   color: #202020;
 }
@@ -57,12 +54,12 @@ main ul li:not(:last-child) {
 
 /* Cursor mode */
 
-i {
+main ul li i {
   cursor: pointer;
   color: #a0a0a0;
 }
 
-i.fa-bars:hover {
+main ul li i.fa-bars:hover {
   cursor: move;
 }
 
@@ -73,11 +70,11 @@ button.trash {
   border: transparent;
 }
 
-i:hover {
+main ul li i:hover {
   color: #202020;
 }
 
-form {
+main ul li form {
   display: flex;
   align-items: center;
   width: 100%;
@@ -85,7 +82,7 @@ form {
   position: relative;
 }
 
-form input {
+main ul li form input {
   width: 100%;
   border: none;
   outline: none;
@@ -94,7 +91,7 @@ form input {
   font-size: 16px;
 }
 
-form button {
+main ul li form button {
   position: absolute;
   right: 0;
   background-color: transparent;

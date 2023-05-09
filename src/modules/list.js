@@ -70,14 +70,8 @@ export class List {
     this.tasks.sort((a, b) => b.index - a.index).forEach((task) => {
       const { taskNode, descriptionNode, taskIndex } = task.createNode();
       this.container.after(taskNode);
-      descriptionNode.onfocus = (e) => {
-        descriptionNode.removeAttribute('readonly');
-        this.editing(e, taskNode, taskIndex);
-      };
-
-      descriptionNode.onblur = (e) => {
-        this.edited(e, taskNode);
-      };
+      descriptionNode.onfocus = (e) => this.editing(e, taskNode, taskIndex);
+      descriptionNode.onblur = (e) => this.edited(e, taskNode);
       const completeBtn = taskNode.querySelector('input[type="checkbox"]');
       completeBtn.onclick = () => this.toggleTaskStatus(task);
     });
